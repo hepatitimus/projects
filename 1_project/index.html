@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moja Stranica</title>
+    <script src="https://kit.fontawesome.com/981f9c2744.js" crossorigin="anonymous"></script>
+    <script src="../node_modules/axios/dist/axios.min.js"></script>
+</head>
+<body>
+    <div id="caki"></div>
+    <h1>HELLO</h1>
+    <h2>HELLO</h2>
+    <h3>HELLO</h3>
+    <h4>HELLO</h4>
+    <h5>HELLO</h5>
+    <h6>HELLO</h6>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur soluta rem enim necessitatibus recusandae assumenda pariatur harum molestias dolores! Vitae velit exercitationem placeat sapiente in veritatis impedit at ex dignissimos.</p>
+    <p></p>
+    <table>
+        <thead>
+            <tr>
+                <th>1</th>
+                <th>2</th>
+                <th>3</th>
+                <th>4</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>22</td>
+                <td>33</td>
+                <td>444</td>
+                <td>532</td>
+            </tr>
+            <tr>
+                <td>22</td>
+                <td>33</td>
+                <td>444</td>
+                <td>532</td>
+            </tr>
+            <tr>
+                <td>22</td>
+                <td>33</td>
+                <td>444</td>
+                <td>532</td>
+            </tr>
+            <tr>
+                <td>22</td>
+                <td>33</td>
+                <td>444</td>
+                <td>532</td>
+            </tr>
+            <tr>
+                <td>22</td>
+                <td>33</td>
+                <td>444</td>
+                <td>532</td>
+            </tr>
+            <tr>
+                <td>22</td>
+                <td>33</td>
+                <td>444</td>
+                <td>532</td>
+            </tr>
+            <tr>
+                <td>22</td>
+                <td>33</td>
+                <td>444</td>
+                <td>532</td>
+            </tr>
+            <tr>
+                <td>22</td>
+                <td>33</td>
+                <td>444</td>
+                <td>532</td>
+            </tr>
+            <tr>
+                <td>22</td>
+                <td>33</td>
+                <td>444</td>
+                <td>532</td>
+            </tr>
+            
+        </tbody>
+    </table>
+    <hr>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptas temporibus sint ratione reprehenderit ullam amet ex? Animi modi sint<br> laudantium inventore velit quo dolorum illo expedita. Officia magnam adipisci quisquam!</p>
+    <script type="text/javascript" >
+        axios.get('https://api.spacexdata.com/v3/dragons').then((res)=>{
+            if (res){
+                var body = document.querySelector('#caki');
+                for(let i = 0; i < res.data.length; i++){
+                    var x = document.createElement('h1');
+                    x.innerHTML = res.data[i].name;
+                    x.style.color = `#32a${i}5${i+i}`;
+                    var p = document.createElement('p');
+                    p.innerText = res.data[i].description;
+                    document.getElementById('caki').appendChild(x);
+                    document.getElementById('caki').appendChild(p);
+                }
+            }
+        }).catch((err)=>{
+            alert(err);
+        })
+    </script>
+</body>
+</html>
+
+<!--
+    <Tag></Tag>
+    <Tag>
+    <Tag /> 
+
+    <Tag id="jedinstveni" class="zajednicka" name="ime1" [type="{text, password, email, number}", src=""]> </Tag>
+    <Tag id="jedinstveni" class="zajednicka" name="ime1" [type="{text, password, email, number}"]>
+    <Tag id="jedinstveni" class="zajednicka" name="ime1" [type="{text, password, email, number}"] />
+
+    <script type="text/javascript"></script>
+    Hypertext markup language HTML
+    Cascading style sheet CSS
+    JavaScript
+
+    Tekstualni
+    Heading
+        h1,h2,h3,h4,h5,h6
+    p, label
+
+    Grupisanje
+    div, section, aside, main - jedno te isto
+    
+    Primer grupisanja:
+    <div>
+        <h1></h1>
+        <p></p>
+        <div>
+            <h1></h1>
+            <div>
+                ...
+            </div>
+        </div>
+    </div>
+
+    Input
+    <input type="text" /> <input type="email"/> <input type="number" /> <input type="password" />
+
+    Button
+    <button>Tekst za button</button>
+    <input type="button" value="Tekst za button"/>
+
+    Tabele
+    <table></table> - tabela
+    <thead></thead> - heading deo tabele
+    <tbody></tbody> - telo tabele
+    <tr></tr> - red
+    <td></td> - celija
+    <th></tH>
+
+    <table>
+        <thead>
+            <tr>
+                <th>1</th>
+                <th>2</th>
+                <th>3</th>
+                <th>4</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>22</td>
+                <td>33</td>
+                <td>444</td>
+                <td>532</td>
+            </tr>
+            <tr>
+                <td>22</td>
+                <td>33</td>
+                <td>444</td>
+                <td>532</td>
+            </tr>
+            <tr>
+                <td>22</td>
+                <td>33</td>
+                <td>444</td>
+                <td>532</td>
+            </tr>
+            <tr>
+                <td>22</td>
+                <td>33</td>
+                <td>444</td>
+                <td>532</td>
+            </tr>
+            <tr>
+                <td>22</td>
+                <td>33</td>
+                <td>444</td>
+                <td>532</td>
+            </tr>
+            <tr>
+                <td>22</td>
+                <td>33</td>
+                <td>444</td>
+                <td>532</td>
+            </tr>
+            <tr>
+                <td>22</td>
+                <td>33</td>
+                <td>444</td>
+                <td>532</td>
+            </tr>
+            <tr>
+                <td>22</td>
+                <td>33</td>
+                <td>444</td>
+                <td>532</td>
+            </tr>
+            <tr>
+                <td>22</td>
+                <td>33</td>
+                <td>444</td>
+                <td>532</td>
+            </tr>
+            
+        </tbody>
+    </table>
+
+    Separatori
+    <hr>
+    <br>
+   
+-->
